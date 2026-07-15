@@ -11,6 +11,18 @@
         Your browser does not support the video tag
     </video>
 
-    <video src="https://samplelib.com/mp4/sample-10s-360p.mp4" loop autoplay controls width="300" height="500">Your browser does not support the video tag</video>
+    <video src="https://samplelib.com/mp4/sample-10s-360p.mp4" loop autoplay muted controls width="300" height="500">Your browser does not support the video tag</video>
+
+    <video src="https://samplelib.com/mp4/sample-10s-h265.mp4" loop autoplay muted controls width="300" height="500" poster="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcAmtzLCgHqwSEQlIkNKMufSDLeO44Gw86VDTWJz59Kg&s=10">Your browser does not support the video tag
+
+    </video>
+
+    <!-- preload -->
+    <!-- none: Don't preload; load only when user starts playing -->
+    <!-- metadata: Load only information like duration, dimensions etc -->
+    <!-- auto: Automatic: Browser load video immediately -->
+       <video src="https://samplelib.com/mp4/sample-10s-360p.mp4" autoplay muted preload="none" controls width="690" height="550" >
+        Your browser does not support the video tag
+    </video>
 </body>
 </html>
