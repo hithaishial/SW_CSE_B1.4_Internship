@@ -1,0 +1,158 @@
+/* ==========================================================================
+   1. Universal Reset
+   ========================================================================== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ==========================================================================
+   2. CSS Custom Properties (Variables)
+   ========================================================================== */
+:root {
+  /* Color Palette */
+  --bg-primary: #0f172a;       /* Dark slate background */
+  --bg-surface: #1e293b;       /* Card/section background */
+  --text-main: #f8fafc;        /* Off-white text */
+  --text-muted: #94a3b8;       /* Muted gray text */
+  --accent-color: #38bdf8;     /* Vibrant sky blue */
+  --accent-hover: #0284c7;     /* Deeper blue for hover states */
+
+  /* Typography */
+  --font-heading: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-body: system-ui, -apple-system, sans-serif;
+}
+
+/* Base Body Styles */
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-main);
+  font-family: var(--font-body);
+  line-height: 1.6;
+}
+
+/* ==========================================================================
+   3. Navbar Styles
+   ========================================================================== */
+/* Element Selector */
+nav {
+  background-color: var(--bg-surface);
+  padding: 1.25rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #334155;
+}
+
+/* Class Selector */
+.nav-logo {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--accent-color);
+  text-decoration: none;
+}
+
+/* Descendant Selector (Targeting <ul> inside <nav>) */
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+}
+
+/* Descendant Selector (Targeting <a> inside <ul> inside <nav>) */
+nav ul a {
+  color: var(--text-muted);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+nav ul a:hover {
+  color: var(--accent-color);
+}
+
+/* ==========================================================================
+   4. Hero Section Styles
+   ========================================================================== */
+/* ID Selector */
+#hero {
+  padding: 6rem 2rem;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Descendant Selector */
+#hero h1 {
+  font-family: var(--font-heading);
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+/* Descendant Selector */
+#hero p {
+  color: var(--text-muted);
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+/* Class Selector */
+.btn-primary {
+  display: inline-block;
+  background-color: var(--accent-color);
+  color: var(--bg-primary);
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+}
+
+.btn-primary:hover {
+  background-color: var(--accent-hover);
+}
+
+/* ==========================================================================
+   5. Projects Section (Additional Section)
+   ========================================================================== */
+/* ID Selector */
+#projects {
+  background-color: var(--bg-surface);
+  padding: 4rem 2rem;
+}
+
+/* Class Selector */
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2.5rem;
+  color: var(--text-main);
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.project-card {
+  background-color: var(--bg-primary);
+  border-radius: 8px;
+  padding: 1.5rem;
+  border: 1px solid #334155;
+}
+
+/* Descendant Selector */
+.project-card h3 {
+  color: var(--accent-color);
+  margin-bottom: 0.5rem;
+}
+
+.project-card p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
