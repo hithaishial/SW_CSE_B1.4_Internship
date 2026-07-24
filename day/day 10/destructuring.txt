@@ -1,0 +1,2 @@
+Destructuring is a feature introduced in ES6 (ECMAScript 2015) that allows you to extract or unpack values from arrays and properties from objects into separate variables using a clean, concise syntax. 
+It helps reduce boilerplate code and is widely used in modern JavaScript and React for writing more readable and efficient programs.
