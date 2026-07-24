@@ -52,10 +52,11 @@
             renderTasks();
         }
 
-        function toggleTask(id){
-            tasks = tasks.map(task => {
+        function toggleTask(id){  
+            // toggle means converting from true to false and false to true
+            tasks = tasks.map(task => { //map is to link the task
                 if(task.id === id){
-                    return{...task,completed:!task.completed};
+                    return{...task,completed:!task.completed}; // changing status from not done to done
                 }
                 return task;
             });
