@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Flexbox: flex-item properties</title>
     <style>
-     /* ========== NAVIGATION BAR (Pattern) ========== */
+        /* ========== NAVIGATION BAR (Pattern) ========== */
         .nav {
             display: flex;
             justify-content: space-between;
@@ -19,6 +19,8 @@
             display: flex;
             gap: 16px;
             list-style: none;
+            margin: 0;
+            padding: 0;
         }
 
         .nav-links a {
@@ -79,14 +81,13 @@
             background-color: lightcoral;
         }
 
+        /* Placed after .shrink-item so it correctly overrides it */
         .no-shrink {
             flex-shrink: 0; /* do not shrink */
             background-color: coral;
         }
 
-        /* ========== 3. flex-basis ========== 
-        Sets the initial main size of a flex item before grow or shrink
-        */
+        /* ========== 3. flex-basis ========== */
         .basis-container {
             display: flex;
         }
@@ -101,7 +102,7 @@
             flex: 0 0 200px; /* fixed basis 200px */
         }
 
-        /* ========== 4. flex shorthand (grow, shrink, basis) ========== */
+        /* ========== 4. flex shorthand ========== */
         .shorthand-container {
             display: flex;
         }
@@ -144,7 +145,8 @@
         }
 
         /* ========== 6. order ========== */
-        .    {
+        /* Fixed missing class name selector */
+        .order-container {
             display: flex;
         }
 
@@ -154,7 +156,7 @@
         }
 
         .order-first {
-            order: -1; /* -1: appears first visually| 1 | 2 | Default: 0 */
+            order: -1; /* -1: appears first visually */
             background-color: rgb(173, 132, 235);
         }
     </style>
@@ -230,7 +232,7 @@
 
         <!-- 6. order -->
         <h2>6. order (change visual order)</h2>
-        <div class="flex-demo-container     ">
+        <div class="flex-demo-container order-container">
             <div class="item order-item">Item 1</div>
             <div class="item order-item order-first">Item 2 (first)</div>
             <div class="item order-item">Item 3</div>
